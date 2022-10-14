@@ -14,12 +14,22 @@ body {
   font-style: normal;
   background: var(--main-bg);
   font-weight: 400;
+  /* ширина макета */
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 * {
   margin: 0;
   padding: 0;
 }
+
+img {
+  display: block;
+  max-width:100%; 
+  height:auto;
+}
+
 
 .logo {
   font-family: "Raleway"; /* задаём шрифт и размер ЛОГО */
@@ -130,9 +140,9 @@ margin-bottom: 20px;
   color: var(--light-main-color);
   /* курсор мыши при наведении*/
   cursor: pointer;
-  /* margin-top: 30px; */
+  margin: 0 auto;
   display: block;
-  margin: 30px auto 0;
+  /* margin: 30px auto 0; */
   
 }
 
@@ -325,6 +335,7 @@ h2 {
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 4px;
+  line-height: 2;
   letter-spacing: 0.06em;
   color: var(--text-main-color);
 }
@@ -425,7 +436,7 @@ padding: 200px 0;
   text-transform: uppercase;
   color: var(--light-main-color);
   width: 696px;
-  margin: 0 auto;
+  margin: 0px auto 30px;
   text-align: center;
 }
 
@@ -495,11 +506,13 @@ padding: 200px 0;
 /* 20. Для усіх фото задайте
  display:block; max-width:100%; height:auto; */
 
-.whatwedo-img{
+/* img задан по тегу img */ 
+
+/*.whatwedo-img{
   display: block;
   max-width:100%; 
   height:auto;
-}
+}*/
 
 
 /* 27. Для .footer-base приберіть ширину,
@@ -554,9 +567,12 @@ padding: 60px 0;
   gap: 30px;
 }
 
+/* img задан по тегу img */
+
+/*
 .jobs-img{
   display: block;
-}
+}*/
 
 /* 36. Для .job-title задайте padding: 20px 24px;
 а також лівий, правий, нижній бордер за макетом */
@@ -575,10 +591,11 @@ padding: 60px 0;
 .soc-list { 
   margin-left: 70px;
   display: flex;
-
 }
+
 .soc-item {
 }
+
 .soc-link {
   width: 44px;
   height: 44px;
