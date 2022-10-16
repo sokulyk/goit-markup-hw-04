@@ -6,6 +6,7 @@
   --main-bg: #fff; /*цвет основного бєкгроунда */
   --light-gray: #f5f4fa; /*цвет кнопок и рамок*/
   --logo: #000000;
+  --icons: #AFB1B8; /*цвет иконок*/
 }
 
 body {
@@ -78,6 +79,9 @@ margin-bottom: 20px;
 /* цвет ссылок контактов шапка*/
 .contacts {
   color: var(--description-color);
+  /* выравнивание иконок по вертикали */
+  display: flex; 
+  align-items: center;
 }
 
 /* цвет ховера и текущ. ссылки*/
@@ -116,7 +120,22 @@ margin-bottom: 20px;
 .footer-base {
   /* основа цвета ШАПКИ и подвала */
   background: #2f303a;
+}
 
+.hero-base {
+  background-image: linear-gradient(
+    rgb(47, 48, 58, 0.4),
+    rgb(47, 48, 58, 0.6)
+    ), url("/images/bg-header.jpg");
+}
+
+.hero-fon {
+  background-color:rgba(0,0,0,.3);
+  height:100%;
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
 }
 
 /* 12. Для .btn-hero приберіть ширину, висоту, марджин. 
@@ -216,6 +235,10 @@ h2 {
   padding: 94px 0;
 }
 
+.clients {
+  padding: 94px 0;
+}
+
 
 /* 23. Для .our-team-list приберіть паддинг */
 
@@ -260,7 +283,7 @@ h2 {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--description-color);
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 
 /* 29. Для .address-style приберіть паддинг і line-height  */
@@ -277,6 +300,7 @@ h2 {
 
 .address-string:nth-child(-n+2) {
   margin-bottom: 9px;
+  width: 231px;
 }
 
 /*  Портфолио */
@@ -394,7 +418,9 @@ h2 {
 /* 7. Для списку з поштою і номером телефону приберіть паддниг і задайте лівий марджин авто */
 
 .header-menu-contacts {
+  /* border: 1px solid black; */
   display: flex;
+  align-items: ;
   /* flex-grow: 0; */
   gap: 50px;
   margin-left: auto;
@@ -588,15 +614,113 @@ padding: 60px 0;
 
 /* соц линки */
 
-.soc-list { 
-  margin-left: 70px;
+.socnet-container {
+  margin: 12px 70px;
+}
+
+.socnet-header{
+  /* font-style: normal; */
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--light-main-color);
+  margin-bottom: 20px;
+
+}
+
+.socnet-list { 
+  justify-content: center;
   display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  /* border: 1px solid black; */
 }
 
-.soc-item {
+.socnet-item {
 }
 
-.soc-link {
+.socnet-link {
   width: 44px;
   height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
 }
+
+/*.team-soclink {
+  background: var(--description-color);
+
+}*/
+
+.socnet-link:hover {
+  background-color: var(--accent-color);
+} 
+
+.socnet-link:hover .socnet-icons-team{
+  fill: var(--light-main-color);
+}
+
+.socnet-icons {
+  fill: var(--light-main-color);
+}
+
+.socnet-icons-team, .contact-icons, .clients-icons  {
+  /* заливаем иконки цветом */
+  fill: var(--icons)
+}
+
+
+/* телефон и конверт  */
+.contact-icons {
+  margin-right: 10px;
+}
+
+/* ховер телефона и конверта вместе со ссылками */
+
+.links:hover .contact-icons {
+fill: var(--accent-color);
+}
+
+.features-icons {
+  margin-bottom: 30px;
+  padding: 25px 100px;  
+  background-color: var(--light-gray);
+  border-radius: 4px;
+}
+
+.our-clients { 
+  justify-content: center;
+  display: flex;
+  gap: 30px;
+  /* margin-bottom: 30px; */
+  /* border: 1px solid black; */
+}
+
+/*.clients-items {
+  padding: 16px 32px;
+  border: 1px solid var(--icons);
+  border-radius: 4px;
+}*/
+
+.clients-link {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--icons);
+  border-radius: 4px;
+}
+
+.clients-link:hover {
+  border: 1px solid var(--accent-color);
+}
+
+.clients-link:hover .clients-icons {
+  fill: var(--accent-color);
+}
+
