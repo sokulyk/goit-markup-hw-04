@@ -276,6 +276,8 @@ h2 {
   margin-bottom: 10px;
 }
 
+/* 2. Для .our-team-par паддинг замініть на марджин */
+
 .our-team-par {
   /* имена и профессии команды */
   /* font-weight: 400; */
@@ -283,7 +285,8 @@ h2 {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--description-color);
-  padding-bottom: 16px;
+  /* padding-bottom: 16px; */
+  margin-bottom: 16px;
 }
 
 /* 29. Для .address-style приберіть паддинг і line-height  */
@@ -332,8 +335,10 @@ h2 {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+/* 8. При .btn-filtr:focus мають бути такі ж стилі, як і при ховері */
+
 .btn-filtr:focus {
-  border: 1px solid var(--accent-color);
+  /* border: 1px solid var(--accent-color); */
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -345,23 +350,20 @@ h2 {
 
 /* 35. Для .our-joblist-style приберіть бордер
 але там є border */
+/* Для .our-joblist-style приберіть курсор поінтер.  */
 
-.our-joblist-style {
+.our-joblist-item {
   /* стиль списка Наши работы */
   background: var(--main-bg);
   /* border: 1px solid var(--light-gray); */
   max-width: 370px;
    /*отступ между меэлементами списка*/  
-   cursor: pointer;
-}
-
-.our-joblist-style:hover {
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+   /* cursor: pointer; */
 }
 
 /* 37. Для .our-joblist-style h3 задайте нижній марджин */
 
-.our-joblist-style h3 {
+.our-joblist-item h3 {
   /* стиль заголовков Наша команда */
   font-weight: 700;
   font-size: 18px;
@@ -371,7 +373,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
   color: var(--text-main-color);
 }
 
-.our-joblist-style p {
+.our-joblist-item p {
   /* имена и профессии команды */
   /* font-weight: 400; */
   font-size: 16px;
@@ -379,6 +381,11 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
   letter-spacing: 0.03em;
   color: var(--description-color);
 }
+
+.our-joblist-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  
 
 /* 1. Для .header потрібно прибрати ширину і марджин. Задайте лише нижній бордер */
 
@@ -621,11 +628,17 @@ padding: 60px 0;
 
 /* соц линки */
 
+/* 5. Для .socnet-container задайте лише лівий марджин */
+
 .socnet-container {
-  margin: 12px 70px;
+  /* margin: 12px 70px; */
+  margin-left: 70px;
 }
 
-.socnet-header{
+
+/* 6. .socnet-header зробіть р, це не заголовок */
+
+.socnet-par{
   /* font-style: normal; */
   font-weight: 700;
   font-size: 14px;
@@ -637,11 +650,14 @@ padding: 60px 0;
 
 }
 
+/* Для .socnet-list марджин замініть на паддинг */
+
 .socnet-list { 
   justify-content: center;
   display: flex;
   gap: 10px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+  padding-bottom: 30px;
   /* border: 1px solid black; */
 }
 
@@ -692,9 +708,15 @@ padding: 60px 0;
 fill: var(--accent-color);
 }
 
+/* 1. Для .features-icons приберіть паддинги, задайте розміри і позиціонуйте іконку флексами */
 .features-icons {
   margin-bottom: 30px;
-  padding: 25px 100px;  
+  /* padding: 25px 100px;   */
+  width: 270px;
+  height: 120px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   background-color: var(--light-gray);
   border-radius: 4px;
 }
@@ -723,8 +745,11 @@ fill: var(--accent-color);
   border-radius: 4px;
 }
 
+/* 4. При .clients-link:hover краще міняйте колір бордеру, а не малюйте його наново */
+
 .clients-link:hover {
-  border: 1px solid var(--accent-color);
+  /* border: 1px solid var(--accent-color); */
+  border-color: var(--accent-color);
 }
 
 .clients-link:hover .clients-icons {
