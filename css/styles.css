@@ -125,8 +125,11 @@ margin-bottom: 20px;
 .hero-base {
   background-image: linear-gradient(
     rgb(47, 48, 58, 0.4),
-    rgb(47, 48, 58, 0.6)
+    rgb(47, 48, 58, 0.4)
     ), url("../images/bg-header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-fon {
@@ -328,7 +331,8 @@ h2 {
 }
 
 .btn-filtr.curr,
-.btn-filtr:hover {
+.btn-filtr:hover,
+.btn-filtr:focus {
   color: var(--light-main-color);
   background: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -337,11 +341,12 @@ h2 {
 
 /* 8. При .btn-filtr:focus мають бути такі ж стилі, як і при ховері */
 
-.btn-filtr:focus {
-  /* border: 1px solid var(--accent-color); */
+/* .btn-filtr:focus { 
+  border: 1px solid var(--accent-color);
+
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-}
+}*/
 
 .btn-filtr:active {
   background: #58aef5;
@@ -382,7 +387,8 @@ h2 {
   color: var(--description-color);
 }
 
-.our-joblist-item:hover {
+.our-joblist-links:hover {
+  display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   }
   
@@ -657,7 +663,7 @@ padding: 60px 0;
   display: flex;
   gap: 10px;
   /* margin-bottom: 30px; */
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
   /* border: 1px solid black; */
 }
 
